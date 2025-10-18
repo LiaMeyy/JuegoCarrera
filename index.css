@@ -1,0 +1,142 @@
+ * {
+     margin: 0;
+     padding: 0;
+     gap: 0;
+ }
+
+ .cart {
+     display: grid;
+     width: 100%;
+     height: 100%;
+ }
+
+ .videoBG {
+    position: relative;
+     width: 100;
+     height: 100%;
+     overflow: hidden;
+     z-index: -1;
+
+ }
+
+ .videoBG video {
+     width: 100vw;
+     height: 100vh;
+     object-fit: cover;
+ }
+
+ .titulo_menu {
+     display: grid;
+     grid-template-rows: auto auto;
+     justify-content: center;
+     justify-items: center;
+     align-content: center;
+     gap: 50px;
+     width: 100%;
+     height: 100%;
+     position: absolute;
+
+ }
+
+ .titulo {
+     font-family: 'Permanent Marker', cursive;
+     color: white;
+     font-size: 130px;
+     text-align: center;
+     line-height: 0.5;
+ }
+
+
+ #pink {
+     color: rgb(255, 0, 149)
+ }
+
+ .footer-shape {
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 180px;
+     background: linear-gradient(135deg, #ff4ecb 0%, #ffce33 100%);
+     clip-path: polygon(0 60%, 100% 30%, 100% 100%, 0% 100%);
+     z-index: 10;
+ }
+
+ .by {
+     display: grid;
+     grid-template-rows: auto auto;
+     justify-items: center;
+     font-family: 'Roboto Condensed', sans-serif;
+     color: rgb(255, 240, 251);
+     gap: 50px
+ }
+
+
+ .play button {
+    background: radial-gradient(circle at top left, #ff6bd6, #ff00c8, #ff4ecb);
+    color: white;
+    border: none;
+    padding: 25px 30px;
+    border-radius: 10%;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 0, 200, 0.7), 
+                0 0 40px rgba(255, 0, 200, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.play button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.3), transparent 30%);
+    animation: rotate 2s linear infinite;
+}
+
+.play button:hover {
+    background: radial-gradient(circle at top left, #ffecfa, #ffddf8, #ffb6e9);
+    color: rgba(255, 0, 200, 1);
+    box-shadow: 0 0 30px rgba(255, 0, 200, 1),
+                0 0 60px rgba(255, 0, 200, 0.8);
+}
+
+.play-icon {
+    position: relative;
+    z-index: 2;
+    font-size: 50px;
+    text-shadow: 0 0 10px white, 0 0 20px #ff4ecb;
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+.cart {
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+#logo{
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-end;
+    width: 400px;
+    top: -70px;
+    position: absolute;
+    padding-left: 80%;
+    height: 30%;
+}

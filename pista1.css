@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #05010f, #0a001a);
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.pista1-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  padding: 40px;
+}
+
+body img {
+  width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 0 40px rgba(255, 0, 255, 0.3);
+}
+
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  gap: 25px;
+  background: rgba(10, 0, 30, 0.6);
+  border: 2px solid rgba(255, 0, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.4),
+              0 0 60px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  width: 550px;
+}
+
+.descripcion h1 {
+  font-size: 60px;
+  text-shadow: 0 0 20px #ff00c8, 0 0 40px #00ffe7;
+  animation: pulse 2s infinite alternate;
+}
+
+.descripcion h2 {
+  font-size: 26px;
+  text-shadow: 0 0 10px #00ffe7;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+.descripcion p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+}
+
+.linea-deco {
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff00c8, #00ffe7);
+  box-shadow: 0 0 10px #00ffe7;
+  border-radius: 10px;
+  margin: 10
+}
+.buttoms{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:40px
+}
+.buttoms button{
+  background: radial-gradient(circle at top left, #ff6bd6, #ff00c8, #ff4ecb);
+  color: white;
+  border: none;
+  padding: 25px 30px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  box-shadow:
+    0 0 20px rgba(255,0,200,.7),
+    0 0 40px rgba(255,0,200,.5);
+}
+
+.buttoms button:hover{
+  background: radial-gradient(circle at top left, #ffecfa, #ffddf8, #ffb6e9);
+  color: rgba(255, 0, 200, 1);
+  box-shadow:
+    0 0 30px rgba(255,0,200,1),
+    0 0 60px rgba(255,0,200,.8);
+}
