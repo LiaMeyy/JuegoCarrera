@@ -1,33 +1,103 @@
 
-    body {
-      background-color: #05010f;
-      color: white;
-      font-family: 'Orbitron', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
+body {
+  background: radial-gradient(circle at center, #0a0a0a 0%, #1a0026 100%);
+  color: #ff4ffb;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
-    h1 {
-      text-shadow: 0 0 15px #ff00c8, 0 0 30px #00ffe7;
-      margin-bottom: 40px;
-    }
+h1 {
+  font-size: 3em;
+  margin-top: 40px;
+  text-shadow: 0 0 15px #ff00e6, 0 0 30px #ff00ff;
+  letter-spacing: 3px;
+  animation: pulse 2s infinite alternate;
+}
 
-    .vehiculos-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 50px;
-    }
+@keyframes pulse {
+  from { text-shadow: 0 0 10px #ff00ff; }
+  to { text-shadow: 0 0 25px #ff66ff, 0 0 40px #ff00e6; }
+}
 
-    model-viewer {
-      width: 400px;
-      height: 400px;
-      border-radius: 20px;
-      box-shadow: 0 0 25px rgba(255, 0, 255, 0.4);
-      background: radial-gradient(circle at top, #0a001a, #1b0033);
-    }
+.vehiculos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 60px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 1300px;
+}
+
+.vehiculo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.vehiculo:hover {
+  transform: scale(1.05);
+}
+
+
+model-viewer {
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 0, 221, 0.2), rgba(255, 0, 255, 0.1));
+  box-shadow: 0 0 20px #ff00ff55, 0 0 60px #ff33ff33;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+model-viewer:hover {
+  box-shadow: 0 0 40px #ff33ffcc, 0 0 80px #ff00ff99;
+}
+
+
+button {
+  background: linear-gradient(90deg, #ff00e6, #ff4ffb, #ff66ff);
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ff00ffaa;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff66ff, #ff00ff, #ff33cc);
+  box-shadow: 0 0 25px #ff33ffcc, 0 0 50px #ff00ffaa;
+  transform: scale(1.1);
+}
+
+
+.seleccion-texto {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #ff99ff;
+  text-shadow: 0 0 20px #ff00ff;
+  transition: opacity 0.5s;
+}
+
+
+.seleccionado {
+  box-shadow: 0 0 60px #ff33ffcc, 0 0 100px #ff00ffdd;
+  transform: scale(1.1);
+}
+
+
+footer {
+  color: #ffb3ff;
+  font-size: 1rem;
+  padding: 30px;
+  text-shadow: 0 0 10px #ff33ff;
+}

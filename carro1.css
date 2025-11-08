@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+    --color-bg-dark: #120A1A;
+    --color-neon-pink: #FF00FF;
+    --color-neon-blue: #00FFFF;
+    --color-text-light: #F0F0F0;
+    --shadow-pink: 0 0 5px var(--color-neon-pink), 0 0 10px var(--color-neon-pink);
+    --shadow-blue: 0 0 5px var(--color-neon-blue), 0 0 10px var(--color-neon-blue);
+    --border-thickness: 2px;
+}
+
+body {
+    background-color: var(--color-bg-dark);
+    font-family: 'Orbitron', sans-serif; 
+    color: var(--color-text-light);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+}
+
+.main-container {
+    display: flex;
+    width: 90%; 
+    max-width: 1200px; 
+    background: #00000033; 
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2); 
+    flex-wrap: wrap; 
+}
+
+.left-panel {
+    flex: 2;
+    padding: 20px;
+    background: #0A0410; 
+    position: relative;
+    overflow: hidden; 
+    border-radius: 10px 0 0 10px;
+    border: var(--border-thickness) solid #3A1A3A; 
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+.vehiculo-container {
+    width: 100%; 
+    height: 450px;
+    margin-top: 20px; 
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--color-neon-pink);
+}
+
+.track-image {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    display: block;
+}
+
+model-viewer {
+    width: 100%;
+    height: 100%; 
+    display: block;
+}
+
+.track-title {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    font-size: 5em;
+    font-weight: 700;
+    color: var(--color-neon-pink);
+    text-shadow: var(--shadow-pink);
+    opacity: 0.8;
+}
+
+.track-subtitle {
+    position: absolute;
+    top: 150px;
+    left: 200px;
+    font-size: 2em;
+    font-weight: 400;
+    color: var(--color-neon-pink);
+    text-shadow: var(--shadow-pink);
+    opacity: 0.8;
+    transform: rotate(-10deg);
+}
+
+.right-panel {
+    flex: 1; 
+    padding: 30px;
+    background-color: #000000;
+    border-radius: 0 10px 10px 0;
+    border: var(--border-thickness) solid var(--color-neon-blue);
+    box-shadow: 0 0 15px var(--color-neon-blue);
+}
+
+.neon-title {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--color-neon-blue);
+    text-shadow: var(--shadow-blue);
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--color-neon-blue);
+}
+
+.info-section {
+    margin-bottom: 30px;
+}
+
+.section-heading {
+    font-size: 1.2em;
+    color: var(--color-neon-pink);
+    border-bottom: var(--border-thickness) solid var(--color-neon-pink);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 3px var(--color-neon-pink);
+}
+
+.description-text {
+    font-family: sans-serif; 
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #CCCCCC;
+}
+
+.difficulty-stars {
+    font-size: 1.8em;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.difficulty-stars span {
+    color: var(--color-neon-pink); 
+    text-shadow: var(--shadow-pink);
+}
+
+.difficulty-stars span:nth-child(4),
+.difficulty-stars span:nth-child(5) {
+    color: #555555; 
+    text-shadow: none;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.neon-button {
+    font-family: 'Orbitron', sans-serif;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.primary-button {
+    background-color: var(--color-neon-pink);
+    color: var(--color-bg-dark);
+    box-shadow: 0 0 10px var(--color-neon-pink), 0 0 20px var(--color-neon-pink);
+}
+
+.primary-button:hover {
+    background-color: #FF33FF;
+    box-shadow: 0 0 15px #FF33FF, 0 0 30px #FF33FF;
+}
+
+.secondary-button {
+    background-color: #4A004A; 
+    color: var(--color-text-light);
+    border: 2px solid var(--color-neon-pink);
+    box-shadow: 0 0 5px var(--color-neon-pink);
+}
+
+.secondary-button:hover {
+    background-color: #6A006A;
+    box-shadow: 0 0 10px var(--color-neon-pink);
+}
